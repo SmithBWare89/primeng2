@@ -1,0 +1,5 @@
+.menu-container {
+    background-color: var(--dark);
+    padding: 20px;
+    width: 100vw;
+}
