@@ -6,6 +6,8 @@ import { NavigationModule } from './navigation/navigation.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+// PrimeNG Modules
+
 @NgModule({
   declarations: [
     AppComponent
@@ -16,6 +18,8 @@ import { AppComponent } from './app.component';
     NavigationModule
   ],
   providers: [],
+  exports: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

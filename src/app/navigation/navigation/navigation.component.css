@@ -1,5 +1,14 @@
 .menu-container {
     background-color: var(--dark);
-    padding: 20px;
     width: 100vw;
+    height: 100px;
+    color: var(--white);
+    font-size: 2rem;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.echelon-logo {
+    height: 50px;
+    width: 200px;
 }

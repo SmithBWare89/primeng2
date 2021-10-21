@@ -14,3 +14,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.p-menuitem {
+    margin-left: 10px;
+    color: var(--white);
+    height: 100%;
+}
+
+.p-menu-list:hover {
+    background-color: var(--white);
+}
