@@ -1,20 +1,3 @@
 button {
     padding: 10px;
 }
-
-ul {
-    list-style: none;
-    height: 100%;
-}
-
-li {
-    margin-left: 5px;
-    margin-right: 5px;
-    height: 100%;
-    padding: 31px 15px;
-    cursor: pointer;
-}
-
-li:hover {
-    background-color: var(--red);
-}
