@@ -1,0 +1,14 @@
+<div class="flex flex-wrap justify-content-around align-items-center">
+    <select #trainer (change)="handleTrainerSelect(trainer.value)">
+        <option value="Select A Trainer" selected disabled>Select A Trainer</option>
+        <option *ngFor="let trainer of trainers" [value]="trainer.code">{{trainer.name}}</option>
+    </select>
+    <select #level (change)="handleLevelSelect(level.value)">
+        <option value="Select A Level" selected disabled>Select A Level</option>
+        <option *ngFor="let level of levels" [value]="level.code">{{level.name}}</option>
+    </select>
+    <select #category (change)="handleCategorySelect(category.value)">
+        <option value="Select A Category" selected disabled>Select A Category</option>
+        <option *ngFor="let category of categories" [value]="category.code">{{category.name}}</option>
+    </select>
+</div>

@@ -5,6 +5,7 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { EchelonCardModule } from '../card/echeloncard.module';
+import { SelectionModule } from '../selection/selection.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { EchelonCardModule } from '../card/echeloncard.module';
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    EchelonCardModule
+    EchelonCardModule,
+    SelectionModule 
   ],
   exports: [
   ]
