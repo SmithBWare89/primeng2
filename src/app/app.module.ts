@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { NavigationModule } from './navigation/navigation.module';
 
@@ -17,7 +18,8 @@ import { DashboardModule } from './dashboard/dashboard.module';
     AppRoutingModule,
     NavigationModule,
     FooterModule,
-    DashboardModule
+    DashboardModule,
+    HttpClientModule
   ],
   providers: [],
   exports: [
