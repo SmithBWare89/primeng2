@@ -6,6 +6,7 @@ import { NavigationModule } from './navigation/navigation.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterModule } from './footer/footer.module'
+import { DashboardModule } from './dashboard/dashboard.module';
 
 // PrimeNG Modules
 
@@ -17,7 +18,8 @@ import { FooterModule } from './footer/footer.module'
     BrowserModule,
     AppRoutingModule,
     NavigationModule,
-    FooterModule
+    FooterModule,
+    DashboardModule
   ],
   providers: [],
   exports: [

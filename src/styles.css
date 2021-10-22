@@ -70,11 +70,10 @@ header {
 }
 
 main {
-    height: 600px;
+    height: 725px;
 }
 
 footer {
-    height: 100px;
     width: 100vw;
     border-top: 1px solid var(--white);
 }
