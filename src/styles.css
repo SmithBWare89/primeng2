@@ -16,21 +16,11 @@
 }
 
 /* PrimeNG Animations */
-@keyframes fadeinup {
-    0%   {
-        opacity: 0;
-        transform: translateY(-100%);
-        transition: transform .12s cubic-bezier(0, 0, 0.2, 1), opacity .12s cubic-bezier(0, 0, 0.2, 1);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0%);
-    }
-}
 
 /* General/Global Styles */
 body {
     background-color: var(--dark);
+    font-family: 'Montserrat', sans-serif;
 }
 
 ul {
@@ -64,13 +54,13 @@ li:hover {
     background-color: var(--white);
 }
 
-/* Main Body Style */
+/* App Component Section Styles*/
 header {
     border-bottom: 1px solid var(--white);
 }
 
 main {
-    height: 725px;
+    height: 615px;
 }
 
 footer {

@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 // PrimeNG Module
 import { CardModule } from 'primeng/card';
+import { TagModule } from 'primeng/tag';
 
 @NgModule({
   declarations: [
@@ -14,10 +15,10 @@ import { CardModule } from 'primeng/card';
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    CardModule
+    CardModule,
+    TagModule
   ],
   exports: [
-    CardModule
   ]
 })
 export class DashboardModule { }

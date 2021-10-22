@@ -1,17 +1,35 @@
-<p-card [style]="{ 'width': '150px', 'padding': '20px', 'background-color': 'white' }">
-    <ng-template pTemplate="header">
-        <img src="../../../assets/echelon-logo.png" alt="">
-    </ng-template>
-    <ng-template pTemplate="title">
-        <h1>Title</h1>
-    </ng-template>
-    <ng-template pTemplate="subtitle">
-        <h4>Subtitle</h4>
-    </ng-template>
-    <ng-template pTemplate="content">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem, rem?
-    </ng-template>
-    <ng-template pTemplate="footer">
-        <button>Click Me!</button>
-    </ng-template>
-</p-card>
+<div class="flex flex-wrap">
+    <p-card class="col-4" 
+        [style]="{ 
+            'width': '400px', 
+            'padding': '20px', 
+            'background-color': '#002a3a', 
+            'color': '#FFFF', 
+            'border': '2px solid #FFFF' }"
+        >
+            <ng-template pTemplate="title">
+                <div class="flex flex-nowrap align-items-center">
+                    <h3 class="workout-title">Flex Trainer Advanced 30</h3>
+                    <p-tag 
+                        value="Beginner"
+                        [style]="{ 
+                            'padding': '5px 10px', 
+                            'margin-left': '10px', 
+                            'background-color': '#e4002b', 
+                            'font-weight': '700', 
+                            'border-radius': '5px'
+                        }"       
+                    >
+                    </p-tag>
+                </div>
+            </ng-template>
+
+            <ng-template pTemplate="subtitle">
+                <div class="workout-subtitle-container">
+                    <span class="workout-subtitle-item">
+                        Instructor: Shelley Meredith
+                    </span>
+                </div>
+            </ng-template>
+    </p-card>
+</div>
