@@ -4,10 +4,7 @@ import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
-// PrimeNG Module
-import { CardModule } from 'primeng/card';
-import { TagModule } from 'primeng/tag';
-import {ImageModule} from 'primeng/image';
+import { EchelonCardModule } from '../card/echeloncard.module';
 
 @NgModule({
   declarations: [
@@ -16,9 +13,7 @@ import {ImageModule} from 'primeng/image';
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    CardModule,
-    TagModule,
-    ImageModule
+    EchelonCardModule
   ],
   exports: [
   ]

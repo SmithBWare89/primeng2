@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { EchelonapiService } from './echelonapi.service';
-
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +7,6 @@ import { EchelonapiService } from './echelonapi.service';
 })
 
 export class AppComponent {
-  echelonData: any
-  constructor(private echelon: EchelonapiService) {}
-
-  ngOnInit(): void {
-    this.echelon.retrieveData().subscribe((response: any) => console.log(response.items))
-  }
+  constructor() {}
 
 }
