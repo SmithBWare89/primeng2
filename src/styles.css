@@ -15,6 +15,7 @@
     box-sizing: border-box;
 }
 
+/* Menu Style */
 .p-menuitem {
     margin-left: 10px;
     color: var(--white);
@@ -23,4 +24,13 @@
 
 .p-menu-list:hover {
     background-color: var(--white);
+}
+
+/* Main Body Style */
+main {
+    height: 600px;
+}
+
+footer {
+    height: 200px;
 }
