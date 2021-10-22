@@ -68,7 +68,6 @@ main {
 footer {
     width: 100vw;
     border-top: 1px solid var(--white);
-    margin-top: 100px;
 }
 
 /* PrimeNG Dashboard Component Style */

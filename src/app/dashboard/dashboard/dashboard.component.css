@@ -22,5 +22,5 @@ img {
 }
 
 .dashboard-container {
-    max-height: 600px !important;
+    width: 100%;
 }
