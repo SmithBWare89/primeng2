@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { EchelonapiService } from './echelonapi.service';
 
 
 @Component({
@@ -6,6 +7,13 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  title = 'primeng';
+  echelonData: any
+  constructor(private echelon: EchelonapiService) {}
+
+  ngOnInit(): void {
+    this.echelon.retrieveData().subscribe((response: any) => console.log(response.items))
+  }
+
 }
