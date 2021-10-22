@@ -8,8 +8,6 @@ import { AppComponent } from './app.component';
 import { FooterModule } from './footer/footer.module'
 import { DashboardModule } from './dashboard/dashboard.module';
 
-// PrimeNG Modules
-
 @NgModule({
   declarations: [
     AppComponent
