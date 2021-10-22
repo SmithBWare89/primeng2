@@ -15,6 +15,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: var(--dark);
+}
+
 /* Menu Style */
 .p-menuitem {
     margin-left: 10px;
@@ -27,10 +31,16 @@
 }
 
 /* Main Body Style */
+header {
+    border-bottom: 1px solid var(--white);
+}
+
 main {
     height: 600px;
 }
 
 footer {
     height: 200px;
+    width: 100vw;
+    border-top: 1px solid var(--white);
 }
