@@ -60,10 +60,32 @@ header {
 }
 
 main {
-    height: 615px;
+    max-height: 600px !important;
+    padding-left: 10px;
+    padding-top: 10px;
 }
 
 footer {
     width: 100vw;
     border-top: 1px solid var(--white);
+    margin-top: 100px;
+}
+
+/* PrimeNG Dashboard Component Style */
+.p-card {
+    padding: 0;
+    transition-property: box-shadow;
+    transition-duration: .50s;
+}
+
+.p-card:hover {
+    box-shadow: 0px 1px 7px var(--white), 0px 4px 5px -2px var(--white), 0px 10px 15px -5px var(--white);
+}
+
+.p-card-header {
+    padding: 8px;
+}
+
+.p-card-content {
+    margin-top: 10px;
 }
