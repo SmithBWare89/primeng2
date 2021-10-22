@@ -43,6 +43,17 @@ li:hover {
     background-color: var(--red);
 }
 
+.dark-theme {
+        color: var(--white);
+    background-color: var(--dark);
+}
+
+.dark-theme-border {
+    color: var(--white);
+    background-color: var(--dark);
+    border: 1px solid var(--white);
+}
+
 /* Menu Style */
 .p-menuitem {
     margin-left: 10px;

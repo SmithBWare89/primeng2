@@ -1,0 +1,19 @@
+select {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 10px;
+    appearance: none;
+    border: 2px solid var(--red);
+    font-weight: 700;
+}
+
+select:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    font-weight: 700;
+    border: 2px solid var(--red);
+}
