@@ -1,14 +1,35 @@
 <div class="flex flex-wrap justify-content-around align-items-center">
-    <select #trainer (change)="handleTrainerSelect(trainer.value)">
+    <select *ngIf="selectedLevel || selectedCategory;else trainer" disabled>
         <option value="Select A Trainer" selected disabled>Select A Trainer</option>
-        <option *ngFor="let trainer of trainers" [value]="trainer.code">{{trainer.name}}</option>
     </select>
-    <select #level (change)="handleLevelSelect(level.value)">
+    <ng-template #trainer>
+        <select #trainer (change)="handleSelection(trainer.value)">
+            <option value="Select A Trainer" selected disabled>Select A Trainer</option>
+            <option *ngFor="let trainer of trainers" [value]="trainer.code">{{trainer.name}}</option>
+        </select>
+    </ng-template>
+
+    <select *ngIf="selectedTrainer || selectedCategory;else level" disabled>
         <option value="Select A Level" selected disabled>Select A Level</option>
-        <option *ngFor="let level of levels" [value]="level.code">{{level.name}}</option>
     </select>
-    <select #category (change)="handleCategorySelect(category.value)">
+    <ng-template #level>
+        <select #level (change)="handleSelection(level.value)">
+            <option value="Select A Level" selected disabled>Select A Level</option>
+            <option *ngFor="let level of levels" [value]="level.code">{{level.name}}</option>
+        </select>
+    </ng-template>
+
+    <select *ngIf="selectedLevel || selectedTrainer;else category" disabled>
         <option value="Select A Category" selected disabled>Select A Category</option>
-        <option *ngFor="let category of categories" [value]="category.code">{{category.name}}</option>
     </select>
+    <ng-template #category>
+        <select #category (change)="handleSelection(category.value)">
+            <option value="Select A Category" selected disabled>Select A Category</option>
+            <option *ngFor="let category of categories" [value]="category.code">{{category.name}}</option>
+        </select>
+    </ng-template>
+
+    <button (click)="resetSelectState()">
+        Reset
+    </button>
 </div>

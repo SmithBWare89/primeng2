@@ -12,15 +12,15 @@ type MenuOptions = {
 })
 
 export class DropdownComponent implements OnInit {
+  @Output() filterSelection = new EventEmitter<string>()
   
   levels: MenuOptions[]
-  selectedLevel!: MenuOptions
-
   categories: MenuOptions[]
-  selectedCategory!: MenuOptions
-
   trainers: MenuOptions[]
-  selectedTrainer!: MenuOptions
+
+  selectedTrainer: boolean = false
+  selectedCategory: boolean = false
+  selectedLevel: boolean = false
 
   constructor() { 
     this.levels = [
@@ -132,16 +132,29 @@ export class DropdownComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  handleTrainerSelect(value: string){
-    console.log(value)
+  handleSelection(value: string){
+    this.levels.filter(level => level.name === value ? this.selectedLevel = true : '')
+
+    this.categories.filter(category => category.name === value ? this.selectedCategory = true : '')
+    
+    this.trainers.filter(trainer => trainer.name === value ? this.selectedTrainer = true : '')
+
+    this.filterSelection.emit(value)
   }
 
   handleLevelSelect(value: string){
-    console.log(value)
+    this.selectedLevel = true
+    this.filterSelection.emit(value)
   }
 
   handleCategorySelect(value: string){
     console.log(value)
+  }
+
+  resetSelectState() {
+    this.selectedTrainer = false
+    this.selectedCategory = false
+    this.selectedLevel = false
   }
 
 }
