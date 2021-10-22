@@ -17,4 +17,19 @@ export class CardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  findClass(level: string) {
+    switch (level) {
+      case 'Beginner':
+        return 'tag-style beginner'
+      case 'Intermediate':
+        return 'tag-style intermediate'
+      case 'Advanced':
+        return 'tag-style advanced'
+      case 'Not Yet Rated':
+        return 'tag-style not-rated'
+      default: 
+        return 'tag-style beginner'
+    }
+  }
+
 }

@@ -54,6 +54,22 @@ li:hover {
     border: 1px solid var(--white);
 }
 
+.beginner {
+    background-color: var(--beginner);
+}
+
+.advanced {
+    background-color: var(--advanced);
+}
+
+.intermediate {
+    background-color: var(--intermediate);
+}
+
+.not-rated {
+    background-color: var(--not-rated);
+}
+
 /* Menu Style */
 .p-menuitem {
     margin-left: 10px;

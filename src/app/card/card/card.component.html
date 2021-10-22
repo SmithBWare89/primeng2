@@ -10,15 +10,13 @@
         <ng-template pTemplate="header">
             <div class="flex flex-nowrap align-items-center">
                 <h3 class="workout-title">{{ item.name }}</h3>
-                <p-tag [value]="item.level" [style]="{ 
-                        'padding': '5px 5px', 
-                        'margin-left': '10px', 
-                        'background-color': '#e4002b', 
-                        'font-weight': '700',
-                        'font-size': '.75rem', 
-                        'border-radius': '5px'
-                    }">
-                </p-tag>
+                <ng-container>
+                    <p-tag 
+                        [value]="item.level" 
+                        [ngClass]="findClass(item.level)"
+                    >
+                    </p-tag>
+                </ng-container>
             </div>
             <div class="workout-subtitle-container">
                 <span class="workout-subtitle-item">
