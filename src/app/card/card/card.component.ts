@@ -11,8 +11,9 @@ import { WorkoutTimePipe } from 'src/app/pipes/workout-time.pipe';
 })
 export class CardComponent implements OnInit {
   @Input() echelonData: any
-  
-  constructor(private workoutTime: WorkoutTimePipe) { }
+  @Input() filteredSlection: any
+
+  constructor() { }
 
   ngOnInit(): void {
   }

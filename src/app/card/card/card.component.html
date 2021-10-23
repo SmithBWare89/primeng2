@@ -1,5 +1,7 @@
 <div class="flex flex-wrap dashboard-container w-screen">
-    <p-card *ngFor="let item of echelonData.items" 
+    <ng-container *ngIf="filteredSlection;else unfiltered">
+        <p-card
+        *ngFor="let item of filteredSlection" 
         class="fadein" 
         [style]="{ 
             'width': '500px',
@@ -44,4 +46,53 @@
             <img [src]="item.image" alt="">
         </ng-template>
     </p-card>
+    </ng-container>
+    <ng-template #unfiltered>
+        <p-card 
+            *ngFor="let item of echelonData" 
+            class="fadein" 
+            [style]="{ 
+                'width': '500px',
+                'height': '330px', 
+                'background-color': '#002a3a', 
+                'color': '#FFFF', 
+                'border': '2px solid #F6F8F2',
+                'margin': '10px' 
+            }"
+        >
+            <ng-template pTemplate="header">
+                <div class="flex flex-nowrap align-items-center">
+                    <h3 class="workout-title">{{ item.name }}</h3>
+                    <ng-container>
+                        <p-tag 
+                            [value]="item.level" 
+                            [ngClass]="findClass(item.level)"
+                        >
+                        </p-tag>
+                    </ng-container>
+                </div>
+                <div class="workout-subtitle-container">
+                    <span class="workout-subtitle-item">
+                        Instructor: {{item.inst}}
+                    </span>
+                    |
+                    <span class="workout-subtitle-item">
+                        Equipment: {{item.product}}
+                    </span>
+                    |
+                    <span class="workout-subtitle-item">
+                        Time: {{ item.len | workoutTime }}
+                    </span>
+                    |
+                    <span class="workout-subtitle-item">
+                        Updated: {{ item.updatedAt | date }}
+                    </span>
+                </div>
+            </ng-template>
+
+            <ng-template pTemplate="content" class="content-container">
+                <img [src]="item.image" alt="">
+            </ng-template>
+        </p-card>
+    </ng-template>
 </div>

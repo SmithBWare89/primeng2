@@ -1,4 +1,5 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
+import echelonApiItems from '../../definitions/echelonApiItems'
 
 type MenuOptions = {
   name: string,
@@ -12,7 +13,9 @@ type MenuOptions = {
 })
 
 export class DropdownComponent implements OnInit {
+  @Input() echelonData!: echelonApiItems[]
   @Output() filterSelection = new EventEmitter<string>()
+  @Output() resetSelection = new EventEmitter<echelonApiItems[]>()
   
   levels: MenuOptions[]
   categories: MenuOptions[]
@@ -134,27 +137,16 @@ export class DropdownComponent implements OnInit {
 
   handleSelection(value: string){
     this.levels.filter(level => level.name === value ? this.selectedLevel = true : '')
-
     this.categories.filter(category => category.name === value ? this.selectedCategory = true : '')
-    
     this.trainers.filter(trainer => trainer.name === value ? this.selectedTrainer = true : '')
-
     this.filterSelection.emit(value)
-  }
-
-  handleLevelSelect(value: string){
-    this.selectedLevel = true
-    this.filterSelection.emit(value)
-  }
-
-  handleCategorySelect(value: string){
-    console.log(value)
   }
 
   resetSelectState() {
     this.selectedTrainer = false
     this.selectedCategory = false
     this.selectedLevel = false
+    this.resetSelection.emit(this.echelonData)
   }
 
 }

@@ -8,7 +8,6 @@ import { WorkoutTimePipe } from '../pipes/workout-time.pipe';
 // PrimeNG Module
 import { CardModule } from 'primeng/card';
 import { TagModule } from 'primeng/tag';
-import {ToastModule} from 'primeng/toast';
 
 @NgModule({
   declarations: [
@@ -18,8 +17,7 @@ import {ToastModule} from 'primeng/toast';
   imports: [
     CommonModule,
     CardModule,
-    TagModule,
-    ToastModule
+    TagModule
   ],
   exports: [
     CardModule,

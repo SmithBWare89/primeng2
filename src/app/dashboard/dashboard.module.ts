@@ -15,7 +15,7 @@ import { SelectionModule } from '../selection/selection.module';
     CommonModule,
     DashboardRoutingModule,
     EchelonCardModule,
-    SelectionModule 
+    SelectionModule
   ],
   exports: [
   ]

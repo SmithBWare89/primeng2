@@ -6,7 +6,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class WorkoutTimePipe implements PipeTransform {
 
   transform(workoutTime: string): string | null {
-    console.log(workoutTime)
     const minutes = parseInt(workoutTime.split(':')[1], 10)
     const hours = parseInt(workoutTime.split(':')[0], 10)
 
