@@ -1,3 +1,21 @@
 button {
     padding: 10px;
 }
+
+.hamburger-button {
+    padding: 10px;
+    background-color: var(--dark);
+    color: var(--white);
+    font-size: 2rem;
+    border: 1px solid var(--white);
+}
+
+.hamburger-button:hover {
+    background-color: var(--red);
+}
+
+@media screen and (max-width: 600px) {
+    .menu-component-container {
+        display: none;
+    }
+}
