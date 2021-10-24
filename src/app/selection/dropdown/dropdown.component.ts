@@ -15,9 +15,6 @@ type MenuOptions = {
 })
 
 export class DropdownComponent implements OnInit {
-  echelonData!: echelonApiItems[]
-  echelonDataSubscription!: Subscription
-  
   levels: MenuOptions[]
   categories: MenuOptions[]
   trainers: MenuOptions[]
@@ -134,9 +131,6 @@ export class DropdownComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.echelonDataSubscription = this.echelon.getEchelonData().subscribe(
-      value => this.echelonData = value
-    )
   }
 
   handleSelection(selection: string){
@@ -144,12 +138,13 @@ export class DropdownComponent implements OnInit {
     this.categories.filter(category => category.name === selection ? this.selectedCategory = true : '')
     this.trainers.filter(trainer => trainer.name === selection ? this.selectedTrainer = true : '')
     this.echelon.updateFilteredSelection(selection)
+    this.echelon.updateDataFiltered(true)
   }
 
   resetSelectState() {
     this.selectedTrainer = false
     this.selectedCategory = false
     this.selectedLevel = false
-    this.echelon.resetDatatState(this.echelonData)
+    this.echelon.resetDatatState()
   }
 }

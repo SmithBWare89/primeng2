@@ -14,10 +14,12 @@ import { Subscription } from 'rxjs';
 })
 export class CardComponent implements OnInit {
   echelonData!: echelonApiItems[]
-  filteredData!: echelonApiItems[]
+  filteredData!: echelonApiItems[] | undefined
+  dataFiltered!: boolean
 
   echelonDataSubscription!: Subscription
   filteredDataSubscription!: Subscription
+  dataFilteredSubscription!: Subscription
 
   constructor(private echelon: EchelonapiService) { }
 
@@ -28,20 +30,26 @@ export class CardComponent implements OnInit {
 
     this.filteredDataSubscription = this.echelon.getFilteredSelection().subscribe(
       (selection) => {
-        const data: echelonApiItems[] = []
+        console.log(selection)
+        if (selection.length) {
+          const data: echelonApiItems[] = []
 
-        this.echelonData.map(item => {
-          item.inst === selection
-            ? data.push(item)
-            : item.level === selection
+          this.echelonData.map(item => {
+            item.inst === selection
               ? data.push(item)
-              : item.cat === selection
+              : item.level === selection
                 ? data.push(item)
-                : []
-        })
-
-        this.filteredData = data
+                : item.cat === selection
+                  ? data.push(item)
+                  : []
+          })
+           this.filteredData = data
+        }
       }
+    )
+
+    this.dataFilteredSubscription = this.echelon.getDataFiltered().subscribe(
+      selection => this.dataFiltered = selection
     )
   }
 

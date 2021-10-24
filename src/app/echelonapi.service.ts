@@ -11,6 +11,7 @@ import echelonApiResponse from './definitions/echelonApiResponse';
 export class EchelonapiService {
   echelonData = new Subject<echelonApiItems[]>()
   filteredSelection = new Subject<string>()
+  dataFiltered = new Subject<boolean>()
 
   url: string = 'https://gist.githubusercontent.com/jasonbyrne/881459829d342a2ddd495165fb815c2d/raw/e0fb08e2fa2a8288a124b1a187b86ecba35d2cb9/echelon-videos-example.json'
 
@@ -38,8 +39,16 @@ export class EchelonapiService {
     return this.filteredSelection.next(selection)
   }
 
-  public resetDatatState(itemData: echelonApiItems[]) {
+  public getDataFiltered(): Observable<boolean> {
+    return this.dataFiltered.asObservable()
+  }
+
+  public updateDataFiltered(filteredOrNah: boolean): void {
+    return this.dataFiltered.next(filteredOrNah)
+  }
+
+  public resetDatatState(): void {
     this.updateFilteredSelection(undefined)
-    this.updateEchelonData(itemData)
+    this.updateDataFiltered(false)
   }
 }
