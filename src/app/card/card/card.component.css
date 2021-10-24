@@ -8,6 +8,7 @@
 
 .workout-subtitle-item {
     font-size: .85rem;
+    font-weight: 700;
 }
 
 .workout-image {
@@ -27,4 +28,32 @@ img {
     font-weight: 700;
     font-size: .75rem; 
     border-radius: 5px
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 768px) {
+ img {
+     height: 14.13rem;
+ }
+ 
+ .workout-title {
+     font-size: .97rem;
+ }
+
+ .workout-subtitle-item {
+     font-size: .75rem;
+ }
+}
+
+@media screen and (max-width: 600px) {
+    .workout-title {
+        font-size: .99rem;
+    }
+
+    .workout-subtitle-item {
+        font-size: .80rem;
+    }
 }

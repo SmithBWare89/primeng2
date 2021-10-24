@@ -15,14 +15,10 @@
     box-sizing: border-box;
 }
 
-/* PrimeNG Animations */
-
 /* General/Global Styles */
 body {
     background-color: var(--dark);
     font-family: 'Montserrat', sans-serif;
-    height: 100vh;
-    width: 100vw;
 }
 
 ul {
@@ -34,7 +30,7 @@ li {
     margin-left: 5px;
     margin-right: 5px;
     height: 100%;
-    padding: 31px 15px;
+    padding: 30px 15px;
     cursor: pointer;
     background-color: none;
     transition-property: background-color;
@@ -109,6 +105,12 @@ footer {
     padding: 0;
     transition-property: box-shadow;
     transition-duration: .50s;
+    width: 35rem !important;
+    height: 330px; 
+    background-color: #002a3a; 
+    color: #FFFF;
+    border: 2px solid #F6F8F2;
+    margin: 10px 
 }
 
 .p-card:hover {
@@ -121,4 +123,50 @@ footer {
 
 .p-card-content {
     margin-top: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+    .p-card {
+        width: 30rem !important;
+    }
+
+    main {
+        max-height: 34rem !important;
+    }
+
+    li {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .p-card {
+        width: 22rem !important;
+    }
+
+    main {
+        max-height: 36rem !important;
+    }
+
+    li {
+        font-size: 1.50rem;
+    }
+
+    footer li {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        max-height: 32rem !important;
+    }
+
+    .p-card {
+        width: 24rem !important;
+    }
+
+    footer li {
+        font-size: 1rem;
+    }
 }

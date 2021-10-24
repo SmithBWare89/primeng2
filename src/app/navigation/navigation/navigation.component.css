@@ -1,7 +1,6 @@
 .menu-container {
     background-color: var(--dark);
     max-width: 100vw;
-    max-height: 100px;
     color: var(--white);
     font-size: 2rem;
     padding-left: 10px;

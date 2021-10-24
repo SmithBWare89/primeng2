@@ -30,8 +30,7 @@ export class CardComponent implements OnInit {
 
     this.filteredDataSubscription = this.echelon.getFilteredSelection().subscribe(
       (selection) => {
-        console.log(selection)
-        if (selection.length) {
+        if (selection) {
           const data: echelonApiItems[] = []
 
           this.echelonData.map(item => {
@@ -49,7 +48,7 @@ export class CardComponent implements OnInit {
     )
 
     this.dataFilteredSubscription = this.echelon.getDataFiltered().subscribe(
-      selection => this.dataFiltered = selection
+      isFilteredSelection => this.dataFiltered = isFilteredSelection
     )
   }
 

@@ -1,16 +1,8 @@
 <div class="flex flex-wrap dashboard-container w-screen">
     <ng-container *ngIf="dataFiltered;else unfiltered">
         <p-card
-        *ngFor="let item of filteredData" 
-        class="fadein" 
-        [style]="{ 
-            'width': '500px',
-            'height': '330px', 
-            'background-color': '#002a3a', 
-            'color': '#FFFF', 
-            'border': '2px solid #F6F8F2',
-            'margin': '10px' 
-        }"
+        *ngFor="let item of filteredData; let i = index" 
+        class="fadein"
     >
         <ng-template pTemplate="header">
             <div class="flex flex-nowrap align-items-center">
