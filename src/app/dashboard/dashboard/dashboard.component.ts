@@ -1,21 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { EchelonapiService } from 'src/app/echelonapi.service';
-import echelonApiItems from 'src/app/definitions/echelonApiItems';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent{
 
-  constructor(public echelon: EchelonapiService) { }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.echelon.retrieveData().subscribe(
-      (response: echelonApiItems[]) => {
-        this.echelon.updateEchelonData(response)
-      }
-    )
-  }
 }

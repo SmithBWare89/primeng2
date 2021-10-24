@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { pluck } from 'rxjs/operators';
 import { Observable, Subject } from 'rxjs';
-import echelonApiItems from './definitions/echelonApiItems';
+import echelonApiItems from './definitions/echelonAPIItems';
 import echelonApiResponse from './definitions/echelonApiResponse';
 
 @Injectable({

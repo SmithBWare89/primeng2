@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WorkoutTimePipe } from 'src/app/pipes/workout-time.pipe';
 import { EchelonapiService } from 'src/app/echelonapi.service';
-import echelonApiItems from 'src/app/definitions/echelonApiItems';
+import echelonApiItems from 'src/app/definitions/echelonAPIItems';
 import { Subscription } from 'rxjs';
 
 @Component({

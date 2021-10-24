@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { EchelonapiService } from '../../echelonapi.service'
-import { Subscription } from 'rxjs'
-import echelonApiItems from 'src/app/definitions/echelonApiItems';
 
 type MenuOptions = {
   name: string,

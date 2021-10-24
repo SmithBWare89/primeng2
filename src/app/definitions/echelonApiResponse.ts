@@ -1,4 +1,4 @@
-import echelonApiItems from "./echelonApiItems";
+import echelonApiItems from "./echelonAPIItems";
 
 export default interface echelonApiResponse{
     total: number,
