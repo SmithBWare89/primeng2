@@ -1,11 +1,14 @@
-<div class="flex flex-wrap h-full w-screen">
-    <header class="flex-1 static h-7rem">
+<div class="flex flex-wrap h-full w-screen overflow-x-hidden">
+    <header class="flex-1 static">
         <app-navigation></app-navigation>
     </header>
-    <main class="flex-2 overflow-y-auto overflow-x-hidden">
-        <router-outlet></router-outlet>
+    <div class="flex-2 w-screen ml-2">
+        <app-dropdown></app-dropdown>
+    </div>
+    <main class="flex-3 overflow-y-auto overflow-x-hidden">
+        <router-outlet class=""></router-outlet>
     </main>
-    <footer class="flex-3 w-screen">
+    <footer class="flex-4 w-screen">
         <app-footer></app-footer>
     </footer>
 </div>

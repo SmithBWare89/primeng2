@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterModule } from './footer/footer.module'
 import { DashboardModule } from './dashboard/dashboard.module';
+import { SelectionModule } from './selection/selection.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DashboardModule } from './dashboard/dashboard.module';
     NavigationModule,
     FooterModule,
     DashboardModule,
-    HttpClientModule
+    HttpClientModule,
+    SelectionModule
   ],
   providers: [],
   exports: [

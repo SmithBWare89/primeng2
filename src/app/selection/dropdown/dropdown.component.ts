@@ -1,5 +1,7 @@
-import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
-import echelonApiItems from '../../definitions/echelonApiItems'
+import { Component, OnInit } from '@angular/core';
+import { EchelonapiService } from '../../echelonapi.service'
+import { Subscription } from 'rxjs'
+import echelonApiItems from 'src/app/definitions/echelonApiItems';
 
 type MenuOptions = {
   name: string,
@@ -13,9 +15,8 @@ type MenuOptions = {
 })
 
 export class DropdownComponent implements OnInit {
-  @Input() echelonData!: echelonApiItems[]
-  @Output() filterSelection = new EventEmitter<string>()
-  @Output() resetSelection = new EventEmitter<echelonApiItems[]>()
+  echelonData!: echelonApiItems[]
+  echelonDataSubscription!: Subscription
   
   levels: MenuOptions[]
   categories: MenuOptions[]
@@ -25,7 +26,7 @@ export class DropdownComponent implements OnInit {
   selectedCategory: boolean = false
   selectedLevel: boolean = false
 
-  constructor() { 
+  constructor(public echelon: EchelonapiService) { 
     this.levels = [
       {
         name: 'Beginner',
@@ -133,20 +134,22 @@ export class DropdownComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.echelonDataSubscription = this.echelon.getEchelonData().subscribe(
+      value => this.echelonData = value
+    )
   }
 
-  handleSelection(value: string){
-    this.levels.filter(level => level.name === value ? this.selectedLevel = true : '')
-    this.categories.filter(category => category.name === value ? this.selectedCategory = true : '')
-    this.trainers.filter(trainer => trainer.name === value ? this.selectedTrainer = true : '')
-    this.filterSelection.emit(value)
+  handleSelection(selection: string){
+    this.levels.filter(level => level.name === selection ? this.selectedLevel = true : '')
+    this.categories.filter(category => category.name === selection ? this.selectedCategory = true : '')
+    this.trainers.filter(trainer => trainer.name === selection ? this.selectedTrainer = true : '')
+    this.echelon.updateFilteredSelection(selection)
   }
 
   resetSelectState() {
     this.selectedTrainer = false
     this.selectedCategory = false
     this.selectedLevel = false
-    this.resetSelection.emit(this.echelonData)
+    this.echelon.resetDatatState(this.echelonData)
   }
-
 }

@@ -1,7 +1,7 @@
 <div class="flex flex-wrap dashboard-container w-screen">
-    <ng-container *ngIf="filteredSlection;else unfiltered">
+    <ng-container *ngIf="filteredData;else unfiltered">
         <p-card
-        *ngFor="let item of filteredSlection" 
+        *ngFor="let item of filteredData" 
         class="fadein" 
         [style]="{ 
             'width': '500px',

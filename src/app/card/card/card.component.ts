@@ -1,5 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { WorkoutTimePipe } from 'src/app/pipes/workout-time.pipe';
+import { EchelonapiService } from 'src/app/echelonapi.service';
+import echelonApiItems from 'src/app/definitions/echelonApiItems';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-card',
@@ -10,12 +13,36 @@ import { WorkoutTimePipe } from 'src/app/pipes/workout-time.pipe';
   ]
 })
 export class CardComponent implements OnInit {
-  @Input() echelonData: any
-  @Input() filteredSlection: any
+  echelonData!: echelonApiItems[]
+  filteredData!: echelonApiItems[]
 
-  constructor() { }
+  echelonDataSubscription!: Subscription
+  filteredDataSubscription!: Subscription
+
+  constructor(private echelon: EchelonapiService) { }
 
   ngOnInit(): void {
+    this.echelonDataSubscription = this.echelon.getEchelonData().subscribe(
+      (value) => this.echelonData = value
+    )
+
+    this.filteredDataSubscription = this.echelon.getFilteredSelection().subscribe(
+      (selection) => {
+        const data: echelonApiItems[] = []
+
+        this.echelonData.map(item => {
+          item.inst === selection
+            ? data.push(item)
+            : item.level === selection
+              ? data.push(item)
+              : item.cat === selection
+                ? data.push(item)
+                : []
+        })
+
+        this.filteredData = data
+      }
+    )
   }
 
   findClass(level: string) {
@@ -32,5 +59,4 @@ export class CardComponent implements OnInit {
         return 'tag-style beginner'
     }
   }
-
 }
