@@ -95,7 +95,7 @@ main {
     padding-top: 10px;
 }
 
-footer {
+.footer {
     max-height: 100px;
     border-top: 1px solid var(--white);
 }
@@ -131,7 +131,11 @@ footer {
     }
 
     main {
-        max-height: 34rem !important;
+        max-height: 900px !important;
+    }
+
+    .footer {
+        max-height: 150px;
     }
 
     li {
@@ -144,15 +148,19 @@ footer {
         width: 22rem !important;
     }
 
+    section {
+        height: 75px !important;
+    }
+
     main {
-        max-height: 36rem !important;
+        max-height: 900px !important;
     }
 
     li {
         font-size: 1.50rem;
     }
 
-    footer li {
+    .footer li {
         font-size: 1.25rem;
     }
 
@@ -182,14 +190,19 @@ footer {
 
 @media screen and (max-width: 600px) {
     main {
-        max-height: 32rem !important;
+        max-height: 800px!important;
+        margin-top: 60px;
     }
 
     .p-card {
         width: 24rem !important;
     }
 
-    footer li {
+    .footer {
+        max-height: 150px;
+    }
+
+    .footer li {
         font-size: 1rem;
     }
 }

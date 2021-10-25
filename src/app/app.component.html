@@ -1,14 +1,10 @@
 <div class="flex flex-wrap h-screen w-screen overflow-x-hidden overflow-y-hidden">
-    <header class="flex-1 static">
+    <header class="flex-order-1 w-screen static">
         <app-navigation></app-navigation>
     </header>
-    <section class="flex-2 w-screen ml-2 sticky">
-        <app-dropdown></app-dropdown>
-    </section>
-    <main class="flex-3 overflow-y-auto overflow-x-hidden">
-        <router-outlet class=""></router-outlet>
+    <app-dropdown class="flex-order-2 w-screen h-1rem ml-2"></app-dropdown>
+    <main class="flex-order-3 overflow-y-auto overflow-x-hidden">
+        <router-outlet></router-outlet>
     </main>
-    <footer class="flex-4 w-screen">
-        <app-footer></app-footer>
-    </footer>
+    <app-footer class="flex-order-4 w-screen footer"></app-footer>
 </div>
