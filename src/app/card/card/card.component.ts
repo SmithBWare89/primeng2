@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { WorkoutTimePipe } from 'src/app/pipes/workout-time.pipe';
 import { EchelonapiService } from 'src/app/echelonapi.service';
 import echelonApiItems from 'src/app/definitions/echelonAPIItems';
@@ -12,7 +12,7 @@ import { Subscription } from 'rxjs';
     WorkoutTimePipe
   ]
 })
-export class CardComponent implements OnInit {
+export class CardComponent implements OnInit, OnDestroy {
   echelonData!: echelonApiItems[]
   filteredData!: echelonApiItems[] | undefined
   dataFiltered!: boolean
@@ -50,6 +50,12 @@ export class CardComponent implements OnInit {
     this.dataFilteredSubscription = this.echelon.getDataFiltered().subscribe(
       isFilteredSelection => this.dataFiltered = isFilteredSelection
     )
+  }
+
+  ngOnDestroy(): void {
+    this.echelonDataSubscription.unsubscribe()
+    this.filteredDataSubscription.unsubscribe()
+    this.dataFilteredSubscription.unsubscribe()
   }
 
   findClass(level: string) {
