@@ -5,8 +5,9 @@ import { NavigationRoutingModule } from './navigation-routing.module';
 import { MenuComponent } from './menu/menu.component';
 import { NavigationComponent } from './navigation/navigation.component';
 
+import {MatMenuModule} from '@angular/material/menu';
+
 import {MenuModule} from 'primeng/menu';
-import { ButtonModule } from 'primeng/button'
 
 
 @NgModule({
@@ -17,8 +18,8 @@ import { ButtonModule } from 'primeng/button'
   imports: [
     CommonModule,
     NavigationRoutingModule,
-    MenuModule,
-    ButtonModule
+    MatMenuModule,
+    MenuModule
   ],
   exports: [
     NavigationComponent

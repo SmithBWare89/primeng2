@@ -7,20 +7,7 @@
     </ul>
 </div>
 
-<div>
-    <button
-        pButton
-        type="button" 
-        class="hamburger-button"
-        (click)="menu.toggle($event)"
-    >
-        <i class="fas fa-bars"></i>
-    </button>
-    <p-menu 
-        #menu
-        [popup]="true"
-        [model]="items"
-    >
-
-    </p-menu>
-</div>
+<button type="button" label="Show" (click)="menu.toggle($event)" class="hamburger-button">
+    <i class="fas fa-bars"></i>
+</button>
+<p-menu #menu [popup]="true" [model]="items" class="hamburger-menu" [showTransitionOptions]="'5ms'"></p-menu>

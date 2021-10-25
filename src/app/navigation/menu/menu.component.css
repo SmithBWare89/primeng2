@@ -8,14 +8,23 @@ button {
     color: var(--white);
     font-size: 2rem;
     border: 1px solid var(--white);
+    display: none;
 }
 
-.hamburger-button:hover {
-    background-color: var(--red);
+@media screen and (max-width: 1024px) {
+
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .menu-component-container {
         display: none;
     }
+
+    .hamburger-button {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
 }

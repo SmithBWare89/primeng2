@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { FooterModule } from './footer/footer.module'
 import { DashboardModule } from './dashboard/dashboard.module';
 import { SelectionModule } from './selection/selection.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { SelectionModule } from './selection/selection.module';
     FooterModule,
     DashboardModule,
     HttpClientModule,
-    SelectionModule
+    SelectionModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   exports: [
