@@ -17,13 +17,13 @@ Clone the repository to your local machine. Navigate to the folder with your ter
 
 ## Usage
 ### Lazy Loading
-    The Dashboard module lazy loads the Cards module whenever the `/` route is visited allowing for the subscription to only occur whenever the cards need to be displayed. This would be useful if other routes are added in the future.
+The Dashboard module lazy loads the Cards module whenever the `/` route is visited allowing for the subscription to only occur whenever the cards need to be displayed. This would be useful if other routes are added in the future.
 
 ### API Call/Service
-    The `Echelon API Service` file acts as state management and provides the capacity to retrieve data from the API endpoint using one fetch. When the App Component is initialized it retrieves the data using the `retrieveData()` method of the service, uses the `pluck` pipe to only retrieve the `items` array that the applicaiton will use, and sets it as a `new Subject` using `updateEchelonData()` method which will the data to be multicasted to different observers. Whenever the data is retrieved by the `Card Component` the initial data retrieved from the API is able to be subscribed to without making another API call to fetch data. This data is unsubscribed to whenever the user navigates to another page.
+The `Echelon API Service` file acts as state management and provides the capacity to retrieve data from the API endpoint using one fetch. When the App Component is initialized it retrieves the data using the `retrieveData()` method of the service, uses the `pluck` pipe to only retrieve the `items` array that the applicaiton will use, and sets it as a `new Subject` using `updateEchelonData()` method which will the data to be multicasted to different observers. Whenever the data is retrieved by the `Card Component` the initial data retrieved from the API is able to be subscribed to without making another API call to fetch data. This data is unsubscribed to whenever the user navigates to another page.
 
 ### Sort/filter
-    Users are able to sort/filter the information on the webpage using the `select boxes` just below the navigation menu. Users are able to select between a category of workout, their level of fitness, or their trainer of choice. Using the Echelon API Service the applicaiton is able to call the `updatedFilteredSelection()` method using the value from the dropdown, which calls the `next()` method, and feeds the selection through the processing pipeline for filtering in the Card Components ts file.
+Users are able to sort/filter the information on the webpage using the `select boxes` just below the navigation menu. Users are able to select between a category of workout, their level of fitness, or their trainer of choice. Using the Echelon API Service the applicaiton is able to call the `updatedFilteredSelection()` method using the value from the dropdown, which calls the `next()` method, and feeds the selection through the processing pipeline for filtering in the Card Components ts file.
 
 
 ## UI/UX
