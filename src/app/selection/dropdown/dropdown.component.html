@@ -1,38 +1,38 @@
 <div class="flex flex-wrap justify-content-start align-items-center m-1">
     <!-- Select A Trainer -->
     <select *ngIf="selectedLevel || selectedCategory;else trainer" disabled class="dark-theme-border m-2">
-        <option value="Select A Trainer" selected disabled>Select A Trainer</option>
+        <option i18n i18n-value value="Select A Trainer" selected disabled>Select A Trainer</option>
     </select>
     <ng-template #trainer>
         <select #trainer (change)="handleSelection(trainer.value)" class="dark-theme-border m-2">
-            <option value="Select A Trainer" selected disabled class="dark-theme">Select A Trainer</option>
+            <option i18n i18n-value value="Select A Trainer" selected disabled class="dark-theme">Select A Trainer</option>
             <option *ngFor="let trainer of trainers" [value]="trainer.code">{{trainer.name}}</option>
         </select>
     </ng-template>
 
     <!-- Select A Level -->
-    <select *ngIf="selectedTrainer || selectedCategory;else level" disabled class="dark-theme-border m-2">
+    <select i18n *ngIf="selectedTrainer || selectedCategory;else level" disabled class="dark-theme-border m-2">
         <option value="Select A Level" selected disabled>Select A Level</option>
     </select>
     <ng-template #level>
         <select #level (change)="handleSelection(level.value)" class="dark-theme-border m-2">
-            <option value="Select A Level" selected disabled>Select A Level</option>
+            <option i18n i18n-value value="Select A Level" selected disabled>Select A Level</option>
             <option *ngFor="let level of levels" [value]="level.code">{{level.name}}</option>
         </select>
     </ng-template>
 
     <!-- Select A Category -->
-    <select *ngIf="selectedLevel || selectedTrainer;else category" disabled class="dark-theme-border m-2">
+    <select i18n *ngIf="selectedLevel || selectedTrainer;else category" disabled class="dark-theme-border m-2">
         <option value="Select A Category" selected disabled>Select A Category</option>
     </select>
     <ng-template #category>
         <select #category (change)="handleSelection(category.value)" class="dark-theme-border m-2">
-            <option value="Select A Category" selected disabled>Select A Category</option>
+            <option i18n i18n-value value="Select A Category" selected disabled>Select A Category</option>
             <option *ngFor="let category of categories" [value]="category.code">{{category.name}}</option>
         </select>
     </ng-template>
 
-    <button (click)="resetSelectState()" class="dark-theme-border">
+    <button i18n="Reset Button|Button to reset select box state.@@resetButton" (click)="resetSelectState()" class="dark-theme-border">
         Reset
     </button>
 </div>

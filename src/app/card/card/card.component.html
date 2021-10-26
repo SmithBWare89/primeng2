@@ -8,7 +8,8 @@
             <div class="flex flex-nowrap align-items-center">
                 <h3 class="workout-title">{{ item.name }}</h3>
                 <ng-container>
-                    <p-tag 
+                    <p-tag
+
                         [value]="item.level" 
                         [ngClass]="findClass(item.level)"
                     >
@@ -16,26 +17,26 @@
                 </ng-container>
             </div>
             <div class="workout-subtitle-container">
-                <span class="workout-subtitle-item">
+                <span i18n="Instructor|Name of the class instructor.@@filteredCardInstructorName" class="workout-subtitle-item">
                     Instructor: {{item.inst}}
                 </span>
                 |
-                <span class="workout-subtitle-item">
+                <span i18n="Equipment|Name of the equipment used for the workout.@@filteredCardEquipmentName" class="workout-subtitle-item">
                     Equipment: {{item.product}}
                 </span>
                 |
-                <span class="workout-subtitle-item">
-                    Time: {{ item.len | workoutTime }}
+                <span i18n="Time|Length of the current workout.@@filteredCardWorkoutTime" class="workout-subtitle-item">
+                    Time: {{item.len | workoutTime }}
                 </span>
                 |
-                <span class="workout-subtitle-item">
+                <span i18n="Updated|Time of the last update for the workout.@@filteredCardUpdatedAtTime" class="workout-subtitle-item">
                     Updated: {{ item.updatedAt | date }}
                 </span>
             </div>
         </ng-template>
     
         <ng-template pTemplate="content" class="content-container">
-            <img [src]="item.image" alt="">
+            <img i18n i18n-alt="Trainer Image|An image of the trainer using the current machine.@@filteredCardWorkoutImage" [src]="item.image" alt="An image of the trainer using the current machine." />
         </ng-template>
     </p-card>
     </ng-container>
@@ -56,7 +57,7 @@
                 <div class="flex flex-nowrap align-items-center">
                     <h3 class="workout-title">{{ item.name }}</h3>
                     <ng-container>
-                        <p-tag 
+                        <p-tag
                             [value]="item.level" 
                             [ngClass]="findClass(item.level)"
                         >
@@ -64,26 +65,26 @@
                     </ng-container>
                 </div>
                 <div class="workout-subtitle-container">
-                    <span class="workout-subtitle-item">
-                        Instructor: {{item.inst}}
+                    <span i18n="Instructor|Name of the class instructor.@@cardInstructorName" class="workout-subtitle-item">
+                        Instructor: {{item.inst}}`
                     </span>
                     |
-                    <span class="workout-subtitle-item">
+                    <span i18n="Equipment|Name of the equipment used for the workout.@@cardEquipmentName" class="workout-subtitle-item">
                         Equipment: {{item.product}}
                     </span>
                     |
-                    <span class="workout-subtitle-item">
+                    <span i18n="Time|Length of the current workout.@@cardWorkoutTime" class="workout-subtitle-item">
                         Time: {{ item.len | workoutTime }}
                     </span>
                     |
-                    <span class="workout-subtitle-item">
+                    <span i18n="Updated|Time of the last update for the workout.@@cardUpdatedAtTime" class="workout-subtitle-item">
                         Updated: {{ item.updatedAt | date }}
                     </span>
                 </div>
             </ng-template>
 
             <ng-template pTemplate="content" class="content-container">
-                <img [src]="item.image" alt="">
+                <img i18n i18n-alt="Workout Image Alt|A description for the current workouts image.@@cardWorkoutImage" [src]="item.image" alt="An image of the current trainer for the workout.">
             </ng-template>
         </p-card>
     </ng-template>

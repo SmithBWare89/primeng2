@@ -1,13 +1,13 @@
 <div class="h-full menu-component-container">
     <ul class="flex flex-row flex-nowrap justify-content-between align-items-baseline h-full">
-        <li>Home</li>
-        <li>Schedule</li>
-        <li>Shop</li>
-        <li>Logout</li>
+        <li i18n="Full Nav Home|A link to the home page.@@fullNavHome">Home</li>
+        <li i18n="Full Nav Schedule|A link to the scheduling page.@@fullNavSchedule">Schedule</li>
+        <li i18n="Full Nav Shop|A link to the shop page.@@fullNavShop">Shop</li>
+        <li i18n="Full Nav Logout|A link to logout from the application.@@fullNavLogout">Logout</li>
     </ul>
 </div>
 
 <button type="button" label="Show" (click)="menu.toggle($event)" class="hamburger-button">
     <i class="fas fa-bars"></i>
 </button>
-<p-menu #menu [popup]="true" [model]="items" class="hamburger-menu" [showTransitionOptions]="'5ms'"></p-menu>
+<p-menu i18n="Hamburger Menu|Navigation links for tablet and mobile screen sizes.@@mobileScreenNav" #menu [popup]="true" [model]="items" class="hamburger-menu" [showTransitionOptions]="'5ms'"></p-menu>
