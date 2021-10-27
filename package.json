@@ -7,7 +7,11 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "init:extract": "ng extract-i18n"
+    "init:extract": "ng extract-i18n --output-path locale",
+    "start:fr": "ng serve --configuration=fr",
+    "start:es": "ng serve --configuration=es",
+    "start:ger": "ng serve --configuration=ger",
+    "build:all": "ng build && ng build --configuration=fr && ng build --configuration=es && ng build --configuration=ger"
   },
   "private": true,
   "dependencies": {

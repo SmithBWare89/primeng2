@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="fr-FR" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="filteredCardInstructorName" datatype="html">
+        <source> Instructor: <x id="INTERPOLATION" equiv-text="{{item.inst}}"/> </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/card/card/card.component.html</context>
+          <context context-type="linenumber">20,22</context>
+        </context-group>
+        <note priority="1" from="description">Name of the class instructor.</note>
+        <note priority="1" from="meaning">Instructor</note>
+      </trans-unit>
+      <trans-unit id="filteredCardEquipmentName" datatype="html">
+        <source> Equipment: <x id="INTERPOLATION" equiv-text="{{item.product}}"/> </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/card/card/card.component.html</context>
+          <context context-type="linenumber">24,26</context>
+        </context-group>
+        <note priority="1" from="description">Name of the equipment used for the workout.</note>
+        <note priority="1" from="meaning">Equipment</note>
+      </trans-unit>
+      <trans-unit id="filteredCardWorkoutTime" datatype="html">
+        <source> Time: <x id="INTERPOLATION" equiv-text="{{item.len | workoutTime }}"/> </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/card/card/card.component.html</context>
+          <context context-type="linenumber">28,30</context>
+        </context-group>
+        <note priority="1" from="description">Length of the current workout.</note>
+        <note priority="1" from="meaning">Time</note>
+      </trans-unit>
+      <trans-unit id="filteredCardUpdatedAtTime" datatype="html">
+        <source> Updated: <x id="INTERPOLATION" equiv-text="{{ item.updatedAt | date }}"/> </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/card/card/card.component.html</context>
+          <context context-type="linenumber">32,34</context>
+        </context-group>
+        <note priority="1" from="description">Time of the last update for the workout.</note>
+        <note priority="1" from="meaning">Updated</note>
+      </trans-unit>
+      <trans-unit id="filteredCardWorkoutImage" datatype="html">
+        <source>An image of the trainer using the current machine.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/card/card/card.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <note priority="1" from="description">An image of the trainer using the current machine.</note>
+        <note priority="1" from="meaning">Trainer Image</note>
+      </trans-unit>
+      <trans-unit id="cardInstructorName" datatype="html">
+        <source> Instructor: <x id="INTERPOLATION" equiv-text="{{item.inst}}"/>` </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/card/card/card.component.html</context>
+          <context context-type="linenumber">68,70</context>
+        </context-group>
+        <note priority="1" from="description">Name of the class instructor.</note>
+        <note priority="1" from="meaning">Instructor</note>
+      </trans-unit>
+      <trans-unit id="cardEquipmentName" datatype="html">
+        <source> Equipment: <x id="INTERPOLATION" equiv-text="{{item.product}}"/> </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/card/card/card.component.html</context>
+          <context context-type="linenumber">72,74</context>
+        </context-group>
+        <note priority="1" from="description">Name of the equipment used for the workout.</note>
+        <note priority="1" from="meaning">Equipment</note>
+      </trans-unit>
+      <trans-unit id="cardWorkoutTime" datatype="html">
+        <source> Time: <x id="INTERPOLATION" equiv-text="{{ item.len | workoutTime }}"/> </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/card/card/card.component.html</context>
+          <context context-type="linenumber">76,78</context>
+        </context-group>
+        <note priority="1" from="description">Length of the current workout.</note>
+        <note priority="1" from="meaning">Time</note>
+      </trans-unit>
+      <trans-unit id="cardUpdatedAtTime" datatype="html">
+        <source> Updated: <x id="INTERPOLATION" equiv-text="{{ item.updatedAt | date }}"/> </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/card/card/card.component.html</context>
+          <context context-type="linenumber">80,82</context>
+        </context-group>
+        <note priority="1" from="description">Time of the last update for the workout.</note>
+        <note priority="1" from="meaning">Updated</note>
+      </trans-unit>
+      <trans-unit id="cardWorkoutImage" datatype="html">
+        <source>An image of the current trainer for the workout.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/card/card/card.component.html</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+        <note priority="1" from="description">A description for the current workouts image.</note>
+        <note priority="1" from="meaning">Workout Image Alt</note>
+      </trans-unit>
+      <trans-unit id="5779770381601735038" datatype="html">
+        <source>Careers</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer/footer.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1726363342938046830" datatype="html">
+        <source>About</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer/footer.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2544569632476723854" datatype="html">
+        <source>Terms</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer/footer.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fullNavHome" datatype="html">
+        <source>Home</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navigation/menu/menu.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">A link to the home page.</note>
+        <note priority="1" from="meaning">Full Nav Home</note>
+      </trans-unit>
+      <trans-unit id="fullNavSchedule" datatype="html">
+        <source>Schedule</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navigation/menu/menu.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">A link to the scheduling page.</note>
+        <note priority="1" from="meaning">Full Nav Schedule</note>
+      </trans-unit>
+      <trans-unit id="fullNavShop" datatype="html">
+        <source>Shop</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navigation/menu/menu.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">A link to the shop page.</note>
+        <note priority="1" from="meaning">Full Nav Shop</note>
+      </trans-unit>
+      <trans-unit id="fullNavLogout" datatype="html">
+        <source>Logout</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navigation/menu/menu.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">A link to logout from the application.</note>
+        <note priority="1" from="meaning">Full Nav Logout</note>
+      </trans-unit>
+      <trans-unit id="menuEchelonLogo" datatype="html">
+        <source>Echelon Cycling &amp; Fitness Logo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navigation/navigation/navigation.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Logo for Echelon Cycling &amp; Fitness.</note>
+        <note priority="1" from="meaning">Echelon Logo</note>
+      </trans-unit>
+      <trans-unit id="8418995351635627845" datatype="html">
+        <source>Select A Trainer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/selection/dropdown/dropdown.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/selection/dropdown/dropdown.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/selection/dropdown/dropdown.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/selection/dropdown/dropdown.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6063911276710259732" datatype="html">
+        <source><x id="START_TAG_OPTION" ctype="x-option" equiv-text="&lt;option value=&quot;Select A Level&quot; selected disabled&gt;"/>Select A Level<x id="CLOSE_TAG_OPTION" ctype="x-option" equiv-text="&lt;/option&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/selection/dropdown/dropdown.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3071254031238193776" datatype="html">
+        <source>Select A Level</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/selection/dropdown/dropdown.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/selection/dropdown/dropdown.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3140536929331726263" datatype="html">
+        <source><x id="START_TAG_OPTION" ctype="x-option" equiv-text="&lt;option value=&quot;Select A Category&quot; selected disabled&gt;"/>Select A Category<x id="CLOSE_TAG_OPTION" ctype="x-option" equiv-text="&lt;/option&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/selection/dropdown/dropdown.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2856880984395169199" datatype="html">
+        <source>Select A Category</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/selection/dropdown/dropdown.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/selection/dropdown/dropdown.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resetButton" datatype="html">
+        <source> Reset </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/selection/dropdown/dropdown.component.html</context>
+          <context context-type="linenumber">35,37</context>
+        </context-group>
+        <note priority="1" from="description">Button to reset select box state.</note>
+        <note priority="1" from="meaning">Reset Button</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
