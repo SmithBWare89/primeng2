@@ -8,10 +8,13 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "init:extract": "ng extract-i18n --output-path locale",
-    "start:fr": "ng serve --configuration=fr",
-    "start:es": "ng serve --configuration=es",
-    "start:ger": "ng serve --configuration=ger",
-    "build:all": "ng build && ng build --configuration=fr && ng build --configuration=es && ng build --configuration=ger"
+    "start:fr": "ng serve --configuration=fr --port 4201",
+    "build:fr": "ng build --configuration=fr",
+    "start:es": "ng serve --configuration=es --port 4202",
+    "build:es": "ng build --configuration=es",
+    "start:de": "ng serve --configuration=de --port 4203",
+    "build:de": "ng build --configuration=de",
+    "build:all": "ng build && ng build --configuration=fr && ng build --configuration=es && ng build --configuration=de"
   },
   "private": true,
   "dependencies": {

@@ -3,8 +3,27 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "primeng": {
+    "primeng2": {
       "projectType": "application",
+      "i18n":{
+        "sourceLocale": {
+          "code": "en"
+        },
+        "locales": {
+          "es": {
+            "translation": "src/locale/messages.es.xlf",
+            "baseHref": "/es"
+          },
+          "fr": {
+            "translation": "src/locale/messages.fr.xlf",
+            "baseHref": "/fr"
+          },
+          "de": {
+            "translation": "src/locale/messages.de.xlf",
+            "baseHref": "/de"
+          }
+        }
+      },
       "schematics": {
         "@schematics/angular:application": {
           "strict": true
@@ -20,6 +39,7 @@
             "outputPath": "dist/primeng",
             "index": "src/index.html",
             "main": "src/main.ts",
+            "localize": ["de"],
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -56,24 +76,15 @@
             },
             "fr": {
               "aot": true,
-              "outputPath": "dist/fr/",
-              "i18nFile": "src/locale/messages.fr.xlf",
-              "i18nFormat": "xlf",
-              "i18nLocale": "fr"
+              "outputPath": "dist/fr/"
             },
             "es": {
               "aot": true,
-              "outputPath": "dist/es/",
-              "i18nFile": "src/locale/messages.es.xlf",
-              "i18nFormat": "xlf",
-              "i18nLocale": "es"
+              "outputPath": "dist/es/"
             },
-            "ger": {
+            "de": {
               "aot": true,
-              "outputPath": "dist/ger/",
-              "i18nFile": "src/locale/messages.ger.xlf",
-              "i18nFormat": "xlf",
-              "i18nLocale": "ger"
+              "outputPath": "dist/de/"
             },
             "development": {
               "buildOptimizer": false,
@@ -104,8 +115,8 @@
             "es": {
               "browserTarget": "primeng2:build:es"
             },
-            "ger": {
-              "browserTarget": "primeng2:build:ger"
+            "de": {
+              "browserTarget": "primeng2:build:de"
             }
           },
           "defaultConfiguration": "development"
@@ -139,5 +150,5 @@
       }
     }
   },
-  "defaultProject": "primeng"
+  "defaultProject": "primeng2"
 }

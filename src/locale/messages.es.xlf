@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="es" datatype="plaintext" original="ng2.template">
+  <file source-language="en-US" target-language="es-ES" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="filteredCardInstructorName" datatype="html">
         <source> Instructor: <x id="INTERPOLATION" equiv-text="{{item.inst}}"/> </source>
@@ -34,7 +34,7 @@
       </trans-unit>
       <trans-unit id="filteredCardUpdatedAtTime" datatype="html">
         <source> Updated: <x id="INTERPOLATION" equiv-text="{{ item.updatedAt | date }}"/> </source>
-        <source> Actualizado: <x id="INTERPOLATION" equiv-text="{{ item.updatedAt | date }}"/> </source>
+        <target> Actualizado: <x id="INTERPOLATION" equiv-text="{{ item.updatedAt | date }}"/> </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/card/card/card.component.html</context>
           <context context-type="linenumber">32,34</context>
@@ -84,7 +84,7 @@
       </trans-unit>
       <trans-unit id="cardUpdatedAtTime" datatype="html">
         <source> Updated: <x id="INTERPOLATION" equiv-text="{{ item.updatedAt | date }}"/> </source>
-        <source> Actualizado: <x id="INTERPOLATION" equiv-text="{{ item.updatedAt | date }}"/> </source>
+        <target> Actualizado: <x id="INTERPOLATION" equiv-text="{{ item.updatedAt | date }}"/> </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/card/card/card.component.html</context>
           <context context-type="linenumber">80,82</context>

@@ -2,9 +2,11 @@
     <header class="flex-order-1 w-screen static">
         <app-navigation></app-navigation>
     </header>
-    <app-dropdown class="flex-order-2 w-screen h-1rem ml-2"></app-dropdown>
-    <main class="flex-order-3 overflow-y-auto overflow-x-hidden">
+    <main class="flex-order-2 overflow-y-auto overflow-x-hidden">
+        <app-dropdown class="flex-order-2 w-screen h-1rem ml-2"></app-dropdown>
         <router-outlet></router-outlet>
     </main>
-    <app-footer class="flex-order-4 w-screen footer"></app-footer>
+    <footer class="flex-order-3">
+        <app-footer class="flex-order-4 w-screen footer"></app-footer>
+    </footer>
 </div>

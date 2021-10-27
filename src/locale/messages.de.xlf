@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+  <file source-language="en-US" target-language="de-DE" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="filteredCardInstructorName" datatype="html">
         <source> Instructor: <x id="INTERPOLATION" equiv-text="{{item.inst}}"/> </source>
+        <target> Lehrer: <x id="INTERPOLATION" equiv-text="{{item.inst}}"/> </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/card/card/card.component.html</context>
           <context context-type="linenumber">20,22</context>
@@ -13,6 +14,7 @@
       </trans-unit>
       <trans-unit id="filteredCardEquipmentName" datatype="html">
         <source> Equipment: <x id="INTERPOLATION" equiv-text="{{item.product}}"/> </source>
+        <target> Ausrüstung: <x id="INTERPOLATION" equiv-text="{{item.product}}"/> </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/card/card/card.component.html</context>
           <context context-type="linenumber">24,26</context>
@@ -22,6 +24,7 @@
       </trans-unit>
       <trans-unit id="filteredCardWorkoutTime" datatype="html">
         <source> Time: <x id="INTERPOLATION" equiv-text="{{item.len | workoutTime }}"/> </source>
+        <target> Zeit: <x id="INTERPOLATION" equiv-text="{{item.len | workoutTime }}"/> </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/card/card/card.component.html</context>
           <context context-type="linenumber">28,30</context>
@@ -31,6 +34,7 @@
       </trans-unit>
       <trans-unit id="filteredCardUpdatedAtTime" datatype="html">
         <source> Updated: <x id="INTERPOLATION" equiv-text="{{ item.updatedAt | date }}"/> </source>
+        <target> Aktualisiert: <x id="INTERPOLATION" equiv-text="{{ item.updatedAt | date }}"/> </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/card/card/card.component.html</context>
           <context context-type="linenumber">32,34</context>
@@ -40,6 +44,7 @@
       </trans-unit>
       <trans-unit id="filteredCardWorkoutImage" datatype="html">
         <source>An image of the trainer using the current machine.</source>
+        <target>Ein Bild des Trainers, der die aktuelle Maschine verwendet.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/card/card/card.component.html</context>
           <context context-type="linenumber">39</context>
@@ -49,6 +54,7 @@
       </trans-unit>
       <trans-unit id="cardInstructorName" datatype="html">
         <source> Instructor: <x id="INTERPOLATION" equiv-text="{{item.inst}}"/>` </source>
+        <target> Lehrer: <x id="INTERPOLATION" equiv-text="{{item.inst}}"/> </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/card/card/card.component.html</context>
           <context context-type="linenumber">68,70</context>
@@ -58,6 +64,7 @@
       </trans-unit>
       <trans-unit id="cardEquipmentName" datatype="html">
         <source> Equipment: <x id="INTERPOLATION" equiv-text="{{item.product}}"/> </source>
+        <target> Ausrüstung: <x id="INTERPOLATION" equiv-text="{{item.product}}"/> </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/card/card/card.component.html</context>
           <context context-type="linenumber">72,74</context>
@@ -67,6 +74,7 @@
       </trans-unit>
       <trans-unit id="cardWorkoutTime" datatype="html">
         <source> Time: <x id="INTERPOLATION" equiv-text="{{ item.len | workoutTime }}"/> </source>
+        <target> Zeit: <x id="INTERPOLATION" equiv-text="{{item.len | workoutTime }}"/> </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/card/card/card.component.html</context>
           <context context-type="linenumber">76,78</context>
@@ -76,6 +84,7 @@
       </trans-unit>
       <trans-unit id="cardUpdatedAtTime" datatype="html">
         <source> Updated: <x id="INTERPOLATION" equiv-text="{{ item.updatedAt | date }}"/> </source>
+        <target> Aktualisiert: <x id="INTERPOLATION" equiv-text="{{ item.updatedAt | date }}"/> </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/card/card/card.component.html</context>
           <context context-type="linenumber">80,82</context>
@@ -85,6 +94,7 @@
       </trans-unit>
       <trans-unit id="cardWorkoutImage" datatype="html">
         <source>An image of the current trainer for the workout.</source>
+        <target>Ein Bild des aktuellen Trainers für das Training.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/card/card/card.component.html</context>
           <context context-type="linenumber">87</context>
@@ -94,6 +104,7 @@
       </trans-unit>
       <trans-unit id="5779770381601735038" datatype="html">
         <source>Careers</source>
+        <target>Karriere</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/footer/footer/footer.component.html</context>
           <context context-type="linenumber">3</context>
@@ -101,6 +112,7 @@
       </trans-unit>
       <trans-unit id="1726363342938046830" datatype="html">
         <source>About</source>
+        <target>Über</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/footer/footer/footer.component.html</context>
           <context context-type="linenumber">4</context>
@@ -108,6 +120,7 @@
       </trans-unit>
       <trans-unit id="2544569632476723854" datatype="html">
         <source>Terms</source>
+        <target>Bedingungen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/footer/footer/footer.component.html</context>
           <context context-type="linenumber">5</context>
@@ -115,6 +128,7 @@
       </trans-unit>
       <trans-unit id="fullNavHome" datatype="html">
         <source>Home</source>
+        <target>Heim</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/navigation/menu/menu.component.html</context>
           <context context-type="linenumber">3</context>
@@ -124,6 +138,7 @@
       </trans-unit>
       <trans-unit id="fullNavSchedule" datatype="html">
         <source>Schedule</source>
+        <target>Zeitlicher Ablauf</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/navigation/menu/menu.component.html</context>
           <context context-type="linenumber">4</context>
@@ -133,6 +148,7 @@
       </trans-unit>
       <trans-unit id="fullNavShop" datatype="html">
         <source>Shop</source>
+        <target>Einkaufen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/navigation/menu/menu.component.html</context>
           <context context-type="linenumber">5</context>
@@ -142,6 +158,7 @@
       </trans-unit>
       <trans-unit id="fullNavLogout" datatype="html">
         <source>Logout</source>
+        <target>Ausloggen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/navigation/menu/menu.component.html</context>
           <context context-type="linenumber">6</context>
@@ -151,6 +168,7 @@
       </trans-unit>
       <trans-unit id="menuEchelonLogo" datatype="html">
         <source>Echelon Cycling &amp; Fitness Logo</source>
+        <target>Echelon Cycling &amp; Fitness-Logo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/navigation/navigation/navigation.component.html</context>
           <context context-type="linenumber">2</context>
@@ -160,6 +178,7 @@
       </trans-unit>
       <trans-unit id="8418995351635627845" datatype="html">
         <source>Select A Trainer</source>
+        <target>Wähle einen Trainer</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/selection/dropdown/dropdown.component.html</context>
           <context context-type="linenumber">4</context>
@@ -186,6 +205,7 @@
       </trans-unit>
       <trans-unit id="3071254031238193776" datatype="html">
         <source>Select A Level</source>
+        <target>Wählen Sie eine Ebene</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/selection/dropdown/dropdown.component.html</context>
           <context context-type="linenumber">19</context>
@@ -204,6 +224,7 @@
       </trans-unit>
       <trans-unit id="2856880984395169199" datatype="html">
         <source>Select A Category</source>
+        <target>Wählen Sie eine Kategorie aus</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/selection/dropdown/dropdown.component.html</context>
           <context context-type="linenumber">30</context>
@@ -215,6 +236,7 @@
       </trans-unit>
       <trans-unit id="resetButton" datatype="html">
         <source> Reset </source>
+        <target> Zurücksetzen </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/selection/dropdown/dropdown.component.html</context>
           <context context-type="linenumber">35,37</context>

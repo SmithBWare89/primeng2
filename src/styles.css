@@ -82,21 +82,18 @@ li:hover {
 /* App Component Section Styles*/
 header {
     border-bottom: 1px solid var(--white);
-}
-
-section {
-    max-height: 300px;
+    width: 100vw;
 }
 
 main {
-    height: 750px;
-    max-height: 750px;
+    max-height: 600px;
     padding-left: 10px;
     padding-top: 10px;
+    width: 100vw;
 }
 
-.footer {
-    max-height: 100px;
+footer {
+    width: 100vw;
     border-top: 1px solid var(--white);
 }
 
@@ -128,14 +125,6 @@ main {
 @media screen and (max-width: 1024px) {
     .p-card {
         width: 30rem !important;
-    }
-
-    main {
-        max-height: 900px !important;
-    }
-
-    .footer {
-        max-height: 150px;
     }
 
     li {
