@@ -9,8 +9,9 @@
                 <h3 class="workout-title">{{ item.name }}</h3>
                 <ng-container>
                     <p-tag
-
-                        [value]="item.level" 
+                        i18n
+                        i18n-value="Card Tag|Description of the level for the workout.@@filteredCardTag"
+                        [value]="item.level"
                         [ngClass]="findClass(item.level)"
                     >
                     </p-tag>
@@ -56,13 +57,13 @@
             <ng-template pTemplate="header">
                 <div class="flex flex-nowrap align-items-center">
                     <h3 class="workout-title">{{ item.name }}</h3>
-                    <ng-container>
-                        <p-tag
-                            [value]="item.level" 
-                            [ngClass]="findClass(item.level)"
-                        >
-                        </p-tag>
-                    </ng-container>
+                    <p-tag
+                        i18n
+                        i18n-value="Card Tag|Description of the level for the workout.@@filteredCardTag"
+                        [value]="item.level"
+                        [ngClass]="findClass(item.level)"
+                    >
+                    </p-tag>
                 </div>
                 <div class="workout-subtitle-container">
                     <span i18n="Instructor|Name of the class instructor.@@cardInstructorName" class="workout-subtitle-item">

@@ -2,9 +2,28 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="filteredCardTag" datatype="html">
+        <source> <x id="ICU" equiv-text="{item.level, plural, =Beginner {Beginner}, =Intermediate {Intermediate}, =Advanced {Advanced}, =Not Yet Rated {Not Yet Rated}}"/> </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/card/card/card.component.html</context>
+          <context context-type="linenumber">14,16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/card/card/card.component.html</context>
+          <context context-type="linenumber">62,64</context>
+        </context-group>
+        <note priority="1" from="description">Description of the level for the workout.</note>
+        <note priority="1" from="meaning">Card Tag</note>
+      </trans-unit>
+      <trans-unit id="2349319668707783779" datatype="html">
+        <source>{VAR_PLURAL, plural, =Beginner {Beginner} , =Intermediate {Intermediate} , =Advanced {Advanced} , =Not Yet Rated {Not Yet Rated}}</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/card/card/card.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="filteredCardInstructorName" datatype="html">
         <source> Instructor: <x id="INTERPOLATION" equiv-text="{{item.inst}}"/> </source>
-        <target> Instructor: <x id="INTERPOLATION" equiv-text="{{item.inst}}"/> </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/card/card/card.component.html</context>
           <context context-type="linenumber">20,22</context>
@@ -48,11 +67,18 @@
         <note priority="1" from="description">An image of the trainer using the current machine.</note>
         <note priority="1" from="meaning">Trainer Image</note>
       </trans-unit>
+      <trans-unit id="5087323855520505769" datatype="html">
+        <source>{VAR_SELECT, select, =Beginner {Beginner} , =Intermediate {Intermediate} , =Advanced {Advanced} , =Not Yet Rated {Not Yet Rated}}</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/card/card/card.component.html</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="cardInstructorName" datatype="html">
         <source> Instructor: <x id="INTERPOLATION" equiv-text="{{item.inst}}"/>` </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/card/card/card.component.html</context>
-          <context context-type="linenumber">68,70</context>
+          <context context-type="linenumber">67,69</context>
         </context-group>
         <note priority="1" from="description">Name of the class instructor.</note>
         <note priority="1" from="meaning">Instructor</note>
@@ -61,7 +87,7 @@
         <source> Equipment: <x id="INTERPOLATION" equiv-text="{{item.product}}"/> </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/card/card/card.component.html</context>
-          <context context-type="linenumber">72,74</context>
+          <context context-type="linenumber">71,73</context>
         </context-group>
         <note priority="1" from="description">Name of the equipment used for the workout.</note>
         <note priority="1" from="meaning">Equipment</note>
@@ -70,7 +96,7 @@
         <source> Time: <x id="INTERPOLATION" equiv-text="{{ item.len | workoutTime }}"/> </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/card/card/card.component.html</context>
-          <context context-type="linenumber">76,78</context>
+          <context context-type="linenumber">75,77</context>
         </context-group>
         <note priority="1" from="description">Length of the current workout.</note>
         <note priority="1" from="meaning">Time</note>
@@ -79,7 +105,7 @@
         <source> Updated: <x id="INTERPOLATION" equiv-text="{{ item.updatedAt | date }}"/> </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/card/card/card.component.html</context>
-          <context context-type="linenumber">80,82</context>
+          <context context-type="linenumber">79,81</context>
         </context-group>
         <note priority="1" from="description">Time of the last update for the workout.</note>
         <note priority="1" from="meaning">Updated</note>
@@ -88,7 +114,7 @@
         <source>An image of the current trainer for the workout.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/card/card/card.component.html</context>
-          <context context-type="linenumber">87</context>
+          <context context-type="linenumber">86</context>
         </context-group>
         <note priority="1" from="description">A description for the current workouts image.</note>
         <note priority="1" from="meaning">Workout Image Alt</note>
